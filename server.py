@@ -2,10 +2,15 @@
 import emailss
 
 from flask import Flask, request
+from flask_cors import CORS
+from flask_cors import cross_origin
+
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "https://stellar-marshmallow-3b21c9.netlify.app"}})
 
 
-@app.route("/api/send" , methods=["POST"])
+@app.route("/api/send" , methods=["GET","POST"])
+@cross_origin()
 def process_data():
     data = request.json
     sender = request.json["sender"]
