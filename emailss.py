@@ -17,7 +17,7 @@ def envoyer_mail(sender_email, email_destinataire,sujet, message):
 
     server_mail = smtplib.SMTP("smtp-relay.sendinblue.com", 587)
     server_mail.starttls()
-    server_mail.login("crissteddy3@gmail.com", "VDZpYHa4K86xvmO0")
+    server_mail.login("newtrade690@gmail.com", "RXtPScQh9IAqMabU")
     server_mail.sendmail(sender_email, email_destinataire, multipart_message.as_string())
     server_mail.quit()
 
